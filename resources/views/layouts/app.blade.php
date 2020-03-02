@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>AdminLTE 3</title>
+    <title>Incidencias | UME</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -211,6 +211,13 @@
                                 </a>
                             </li>
 
+                            <li class="nav-item">
+                                <a href="/reportar" class="{{ Request::path() === '/' ? 'nav-link active' : 'nav-link' }}">
+                                    <i class="nav-icon far fa-file-alt"></i>
+                                    <p>Reportar</p>
+                                </a>
+                            </li>
+
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon far fa-sticky-note"></i>
@@ -263,13 +270,15 @@
                 <!-- /.content -->
             </div>
             <!-- /.content-wrapper -->
-            <footer class="main-footer">
-                <!-- NO QUITAR -->
-                <strong>Tutoriales YouTube
-                    <div class="float-right d-none d-sm-inline-block">
-                        <b>Version</b> 1.0
-                    </div>
-            </footer>
+           <footer class="main-footer">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+              Version 1.0
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2020-2021 <a href="https://incidencias.ume.com.gt">incidencias</a>.</strong> All rights reserved. </footer>
+        </div>
+        <!-- ./wrapper -->
 
             <!-- Control Sidebar -->
             <aside class="control-sidebar control-sidebar-dark">
