@@ -172,8 +172,8 @@
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                                 @else
                                 {{ Auth::user()->name }}
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                           document.getElementById('logout-form').submit();">
+                                <a class="nav-item " href="{{ route('logout') }}" onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit(); ">
                                     Cerrar Sesión
                                 </a>
 
@@ -212,7 +212,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="/reportar" class="{{ Request::path() === '/' ? 'nav-link active' : 'nav-link' }}">
+                                <a href="/reportar" class="{{ Request::path() === '/' ? 'nav-link inactive' : 'nav-link' }}">
                                     <i class="nav-icon far fa-file-alt"></i>
                                     <p>Reportar</p>
                                 </a>
