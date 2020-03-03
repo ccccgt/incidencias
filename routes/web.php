@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('HOME');
 
-Route::get('/reportar', function () {
-	return view('report');
-});
+Route::get('/report', 'ReportController@index');
+
+Route::resource('usuarios', 'UserController');
+
+
